@@ -1,4 +1,4 @@
-public class Transport {
+public abstract class Transport {
     private String modelName;
     private int wheelsCount;
 
@@ -22,4 +22,20 @@ public class Transport {
     public void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
     }
+
+    public void updateTyre() { System.out.println("Change the wheel"); }
+
+    public void checkEngine() {
+        System.out.println("Check engine");
+    }
+
+    public void checkTrailer() {
+        System.out.println("Check trailer");
+    }
+
+    public void check(Transport transports) {
+        serviceStation.checkTransport(transports);
+    }
+
+    ServiceStation serviceStation = new ServiceStation();
 }
